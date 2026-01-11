@@ -48,15 +48,15 @@ const Navbar = () => {
                             key={link.name}
                             to={link.path}
                             className={`text-sm font-semibold transition-colors ${location.pathname === link.path
-                                    ? 'text-primary-600'
-                                    : 'text-slate-600 hover:text-primary-600'
+                                ? 'text-primary-600'
+                                : 'text-slate-600 hover:text-primary-600'
                                 }`}
                         >
                             {link.name}
                         </Link>
                     ))}
-                    <Link to="/demo" className="btn-primary py-2 px-5 text-sm flex items-center space-x-1">
-                        <span>Request Demo</span>
+                    <Link to="/contact" className="btn-primary py-2 px-5 text-sm flex items-center space-x-1">
+                        <span>Contact Sales</span>
                         <ChevronRight className="w-4 h-4" />
                     </Link>
                 </div>
@@ -87,8 +87,8 @@ const Navbar = () => {
                                     {link.name}
                                 </Link>
                             ))}
-                            <Link to="/demo" className="btn-primary text-center">
-                                Request Demo
+                            <Link to="/contact" className="btn-primary text-center">
+                                Contact Sales
                             </Link>
                         </div>
                     </motion.div>

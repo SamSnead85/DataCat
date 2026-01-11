@@ -35,9 +35,9 @@ const Home = () => {
                                 Transform dormant DB2 mainframe data into active, AI-native assets. Bypassing ETL to deliver immediate insights through Natural Language Querying and Dynamic AI Dashboards.
                             </p>
                             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                                <Link to="/demo">
+                                <Link to="/contact">
                                     <Button variant="primary" className="w-full sm:w-auto text-lg px-8 py-4">
-                                        Request a Demo
+                                        Contact Sales
                                         <ArrowRight className="ml-2 w-5 h-5" />
                                     </Button>
                                 </Link>
@@ -206,7 +206,7 @@ const Home = () => {
                         <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
                             <Link to="/contact">
                                 <Button variant="white" className="w-full sm:w-auto text-lg px-8">
-                                    Get in Touch
+                                    Contact Sales
                                 </Button>
                             </Link>
                             <Link to="/demo">

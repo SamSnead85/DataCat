@@ -1,4 +1,5 @@
 import { ShieldCheck, Lock, EyeOff, FileText, ClipboardCheck, History, UserCheck, Server } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { SectionHeader, Card, Badge } from '../components/common/UIComponents';
 
 const Compliance = () => {
@@ -118,7 +119,9 @@ const Compliance = () => {
                             <p className="text-slate-600 mb-8">
                                 Unsure if your current legacy infrastructure meets AI compliance standards? Schedule a free 1-hour assessment with our security officers.
                             </p>
-                            <button className="btn-primary w-full py-4">Request Assessment</button>
+                            <Link to="/contact">
+                                <button className="btn-primary w-full py-4">Contact Sales</button>
+                            </Link>
                         </div>
                     </div>
                 </div>

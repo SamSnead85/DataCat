@@ -30,29 +30,28 @@ const About = () => {
             <section className="section-padding py-24">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
                     <div>
-                        <h2 className="text-4xl font-display font-bold mb-8">Bridging the Gap Between Legacy and the Future</h2>
+                        <h2 className="text-4xl font-display font-bold mb-8">Unlocking Value in the Digital Era</h2>
                         <p className="text-lg text-slate-600 mb-6 font-medium">
-                            DataCatalyst AI was founded by a group of mainframe veterans and AI researchers who saw a massive hurdle for enterprise innovation.
+                            ZeroG Foundry is a strategic technology group dedicated to building modernization accelerators for the world's most critical data assets.
                         </p>
                         <p className="text-slate-600 mb-8 leading-relaxed">
-                            While the world was racing ahead with Large Language Models, the bedrock of enterprise data—stored in DB2 mainframes—remained essentially "dark." Traditional modernization project failed 70% of the time due to complexity and risk. We built DataCatalyst AI to change that.
+                            With DataCatalyst AI, we've developed a specialized platform that addresses the most complex data architecture challenges. Our focus is on high-performance transformation, security, and immediate AI readiness for enterprise stakeholders.
                         </p>
                         <div className="grid grid-cols-2 gap-8">
                             <div>
-                                <h4 className="text-3xl font-display font-bold text-primary-600 mb-2">10+</h4>
-                                <p className="text-sm text-slate-500 font-bold uppercase tracking-wider">Years Experience</p>
+                                <h4 className="text-3xl font-display font-bold text-primary-600 mb-2">Focused</h4>
+                                <p className="text-sm text-slate-500 font-bold uppercase tracking-wider">Strategic Excellence</p>
                             </div>
                             <div>
-                                <h4 className="text-3xl font-display font-bold text-primary-600 mb-2">50B+</h4>
-                                <p className="text-sm text-slate-500 font-bold uppercase tracking-wider">Records Migrated</p>
+                                <h4 className="text-3xl font-display font-bold text-primary-600 mb-2">Proven</h4>
+                                <p className="text-sm text-slate-500 font-bold uppercase tracking-wider">Enterprise Reliability</p>
                             </div>
                         </div>
                     </div>
                     <div className="bg-surface-gray rounded-3xl p-12 border border-slate-200 aspect-square flex items-center justify-center">
                         <div className="relative">
                             <div className="w-48 h-48 bg-primary-600 rounded-full blur-3xl opacity-20 absolute -top-12 -left-12" />
-                            <div className="w-48 h-48 bg-accent-purple rounded-full blur-3xl opacity-20 absolute -bottom-12 -right-12" />
-                            <Target className="w-32 h-32 text-primary-950 relative z-10" />
+                            <Globe className="w-32 h-32 text-primary-950 relative z-10" />
                         </div>
                     </div>
                 </div>

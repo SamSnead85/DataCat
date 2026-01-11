@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Send, Database, Zap, ArrowRight, CheckCircle2, BarChart2, Table, LineChart, MessageSquare } from 'lucide-react';
 import DataFlowAnimation from '../components/demo/DataFlowAnimation';
@@ -282,8 +283,12 @@ const Demo = () => {
                         This demo uses simulated data. To see a proof-of-concept using a snapshot of your own DB2 environment, schedule a technical consultation.
                     </p>
                     <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-                        <button className="btn-primary py-4 px-10">Request POC</button>
-                        <button className="btn-secondary py-4 px-10 bg-transparent text-white border-white/20 hover:bg-white/10">Talk to Sales</button>
+                        <Link to="/contact">
+                            <button className="btn-primary py-4 px-10">Request POC</button>
+                        </Link>
+                        <Link to="/contact">
+                            <button className="btn-secondary py-4 px-10 bg-transparent text-white border-white/20 hover:bg-white/10">Contact Sales</button>
+                        </Link>
                     </div>
                 </div>
             </section>

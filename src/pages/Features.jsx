@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { Database, Cloud, Zap, MessageSquare, BarChart3, ShieldCheck, Lock, Activity, RefreshCw } from 'lucide-react';
 import { SectionHeader, Card, Badge } from '../components/common/UIComponents';
 
@@ -144,8 +145,12 @@ const Features = () => {
                     Request our full technical whitepaper to see high-level diagrams illustrating the data flow, security layers, and component interaction.
                 </p>
                 <div className="flex justify-center space-x-4">
-                    <button className="btn-primary">Download Whitepaper</button>
-                    <button className="btn-secondary">Request Tech Brief</button>
+                    <Link to="/contact">
+                        <button className="btn-primary">Download Whitepaper</button>
+                    </Link>
+                    <Link to="/contact">
+                        <button className="btn-secondary">Contact Sales</button>
+                    </Link>
                 </div>
             </section>
         </div>

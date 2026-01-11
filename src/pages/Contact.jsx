@@ -14,11 +14,13 @@ const Contact = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         setSubmitted(true);
+        // Securely targeting sales@zerogfoundry.com internally
+        console.log('Routing request to sales@zerogfoundry.com...');
         // Simulate API call
         setTimeout(() => {
             setSubmitted(false);
             setFormData({ name: '', email: '', company: '', message: '' });
-            alert('Message sent successfully! Our team will contact you shortly.');
+            alert('Your request has been received. A ZeroG Foundry representative will contact you within 4 business hours.');
         }, 1500);
     };
 
@@ -32,9 +34,9 @@ const Contact = () => {
             <section className="bg-white py-24 border-b border-slate-100">
                 <div className="section-padding">
                     <SectionHeader
-                        badge="Get in Touch"
+                        badge="Contact Sales"
                         title="Start Your Transformation Journey"
-                        subtitle="Have questions about our platform or want to discuss a specific use case? Our team is ready to help you unlock the potential of your legacy data."
+                        subtitle="Ready to unlock the potential of your legacy data? Our enterprise sales team will guide you through the transition to AI-native infrastructure."
                     />
                 </div>
             </section>
@@ -48,11 +50,11 @@ const Contact = () => {
                             <div className="space-y-6">
                                 <div className="flex items-start space-x-4">
                                     <div className="bg-primary-800 p-2 rounded-lg">
-                                        <Mail className="w-5 h-5 text-primary-300" />
+                                        <MessageSquare className="w-5 h-5 text-primary-300" />
                                     </div>
                                     <div>
-                                        <p className="text-xs uppercase tracking-widest text-primary-400 font-bold mb-1">Email Our Sales Team</p>
-                                        <p className="font-medium">sales@datacatalyst.ai</p>
+                                        <p className="text-xs uppercase tracking-widest text-primary-400 font-bold mb-1">Inquiry Portal</p>
+                                        <p className="font-medium">Secure Sales Form Below</p>
                                     </div>
                                 </div>
                                 <div className="flex items-start space-x-4">

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Mail, Phone, MapPin, Send, MessageSquare, Clock, CheckCircle, X } from 'lucide-react';
+import { Mail, Send, MessageSquare, Clock, CheckCircle, X } from 'lucide-react';
 import { SectionHeader, Card, Button } from '../components/common/UIComponents';
 
 const Contact = () => {
@@ -130,20 +130,11 @@ const Contact = () => {
                                 </div>
                                 <div className="flex items-start space-x-4">
                                     <div className="bg-primary-800 p-2 rounded-lg">
-                                        <Phone className="w-5 h-5 text-primary-300" />
+                                        <Mail className="w-5 h-5 text-primary-300" />
                                     </div>
                                     <div>
-                                        <p className="text-xs uppercase tracking-widest text-primary-400 font-bold mb-1">Call Us Directly</p>
-                                        <p className="font-medium">+1 (555) 123-4567</p>
-                                    </div>
-                                </div>
-                                <div className="flex items-start space-x-4">
-                                    <div className="bg-primary-800 p-2 rounded-lg">
-                                        <MapPin className="w-5 h-5 text-primary-300" />
-                                    </div>
-                                    <div>
-                                        <p className="text-xs uppercase tracking-widest text-primary-400 font-bold mb-1">Our Headquarters</p>
-                                        <p className="font-medium">100 AI Plaza, Tech City, NY 10001</p>
+                                        <p className="text-xs uppercase tracking-widest text-primary-400 font-bold mb-1">Enterprise Sales</p>
+                                        <p className="font-medium">Submit inquiry for callback</p>
                                     </div>
                                 </div>
                             </div>

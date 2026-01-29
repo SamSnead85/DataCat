@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Database, Mail, Phone, MapPin, Linkedin, Twitter, Github } from 'lucide-react';
+import { Database, Mail, Linkedin, Twitter, Github } from 'lucide-react';
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
@@ -55,14 +55,9 @@ const Footer = () => {
                             <Mail className="w-5 h-5 text-primary-400 shrink-0" />
                             <span>Contact us via our secure portal</span>
                         </div>
-                        <div className="flex items-start space-x-3 text-sm">
-                            <Phone className="w-5 h-5 text-primary-400 shrink-0" />
-                            <span>+1 (555) 123-4567</span>
-                        </div>
-                        <div className="flex items-start space-x-3 text-sm">
-                            <MapPin className="w-5 h-5 text-primary-400 shrink-0" />
-                            <span>100 AI Plaza, Tech City, NY 10001</span>
-                        </div>
+                        <Link to="/contact" className="inline-block text-primary-400 hover:text-white text-sm font-medium transition-colors">
+                            Submit an Inquiry →
+                        </Link>
                     </div>
                 </div>
 

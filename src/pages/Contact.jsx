@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Mail, Phone, MapPin, Send, MessageSquare, Clock } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, MessageSquare, Clock, CheckCircle, X } from 'lucide-react';
 import { SectionHeader, Card, Button } from '../components/common/UIComponents';
 
 const Contact = () => {
@@ -10,18 +10,51 @@ const Contact = () => {
         message: ''
     });
     const [submitted, setSubmitted] = useState(false);
+    const [showSuccessModal, setShowSuccessModal] = useState(false);
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         setSubmitted(true);
-        // Securely targeting sales@zerogfoundry.com internally
-        console.log('Routing request to sales@zerogfoundry.com...');
-        // Simulate API call
-        setTimeout(() => {
-            setSubmitted(false);
-            setFormData({ name: '', email: '', company: '', message: '' });
-            alert('Your request has been received. A ZeroG Foundry representative will contact you within 4 business hours.');
-        }, 1500);
+
+        // Create inquiry record with timestamp
+        const inquiry = {
+            ...formData,
+            timestamp: new Date().toISOString(),
+            id: Date.now()
+        };
+
+        // Store inquiry locally (backup)
+        const existingInquiries = JSON.parse(localStorage.getItem('datacatalyst_inquiries') || '[]');
+        existingInquiries.push(inquiry);
+        localStorage.setItem('datacatalyst_inquiries', JSON.stringify(existingInquiries));
+
+        // Log for debugging
+        console.log('Sales inquiry received:', inquiry);
+
+        try {
+            // Submit to Netlify Forms
+            const response = await fetch('/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams({
+                    'form-name': 'contact',
+                    ...formData
+                }).toString()
+            });
+
+            if (!response.ok) {
+                throw new Error('Form submission failed');
+            }
+
+            console.log('Form submitted successfully to Netlify');
+        } catch (error) {
+            console.error('Form submission error:', error);
+            // Form data is still saved locally as backup
+        }
+
+        setSubmitted(false);
+        setFormData({ name: '', email: '', company: '', message: '' });
+        setShowSuccessModal(true);
     };
 
     const handleChange = (e) => {
@@ -30,6 +63,44 @@ const Contact = () => {
 
     return (
         <div className="bg-surface-gray min-h-screen">
+            {/* Success Modal */}
+            {showSuccessModal && (
+                <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+                    {/* Backdrop */}
+                    <div
+                        className="absolute inset-0 bg-primary-950/60 backdrop-blur-sm"
+                        onClick={() => setShowSuccessModal(false)}
+                    />
+                    {/* Modal */}
+                    <div className="relative bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 animate-fade-in">
+                        <button
+                            onClick={() => setShowSuccessModal(false)}
+                            className="absolute top-4 right-4 text-slate-400 hover:text-slate-600 transition-colors"
+                        >
+                            <X className="w-5 h-5" />
+                        </button>
+                        <div className="text-center">
+                            <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-6">
+                                <CheckCircle className="w-8 h-8 text-green-600" />
+                            </div>
+                            <h3 className="text-2xl font-display font-bold text-primary-950 mb-3">
+                                Message Received!
+                            </h3>
+                            <p className="text-slate-600 mb-6">
+                                Thank you for your inquiry. A <span className="font-semibold text-primary-700">Data Catalyst</span> representative will contact you within 4 business hours.
+                            </p>
+                            <Button
+                                variant="primary"
+                                className="w-full"
+                                onClick={() => setShowSuccessModal(false)}
+                            >
+                                Continue Exploring
+                            </Button>
+                        </div>
+                    </div>
+                </div>
+            )}
+
             {/* Header */}
             <section className="bg-white py-24 border-b border-slate-100">
                 <div className="section-padding">

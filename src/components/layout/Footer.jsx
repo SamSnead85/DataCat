@@ -68,7 +68,7 @@ const Footer = () => {
 
                 <div className="pt-10 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
                     <p className="text-xs text-slate-500">
-                        © {currentYear} ZeroG Foundry. All rights reserved. DataCatalyst AI is a product of ZeroG Foundry.
+                        © {currentYear} Data Catalyst. All rights reserved.
                     </p>
                     <div className="flex space-x-6 text-xs text-slate-500">
                         <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>

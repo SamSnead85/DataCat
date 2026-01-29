@@ -32,7 +32,7 @@ const About = () => {
                     <div>
                         <h2 className="text-4xl font-display font-bold mb-8">Unlocking Value in the Digital Era</h2>
                         <p className="text-lg text-slate-600 mb-6 font-medium">
-                            ZeroG Foundry is a strategic technology group dedicated to building modernization accelerators for the world's most critical data assets.
+                            Data Catalyst is a strategic technology platform dedicated to building modernization accelerators for the world's most critical data assets.
                         </p>
                         <p className="text-slate-600 mb-8 leading-relaxed">
                             With DataCatalyst AI, we've developed a specialized platform that addresses the most complex data architecture challenges. Our focus is on high-performance transformation, security, and immediate AI readiness for enterprise stakeholders.

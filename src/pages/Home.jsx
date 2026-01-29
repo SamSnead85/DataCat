@@ -178,14 +178,28 @@ const Home = () => {
             {/* Trust Section */}
             <section className="bg-surface-gray py-20">
                 <div className="section-padding text-center">
-                    <p className="text-sm font-bold text-primary-900 tracking-[0.2em] uppercase mb-12">Trusted by Industry Leaders</p>
-                    <div className="flex flex-wrap justify-center items-center gap-12 opacity-50 grayscale hover:grayscale-0 transition-all">
-                        {/* Logo Placeholders */}
-                        <div className="h-8 w-32 bg-slate-400 rounded-md" />
-                        <div className="h-8 w-40 bg-slate-400 rounded-md" />
-                        <div className="h-10 w-28 bg-slate-400 rounded-md" />
-                        <div className="h-8 w-36 bg-slate-400 rounded-md" />
-                        <div className="h-9 w-32 bg-slate-400 rounded-md" />
+                    <p className="text-sm font-bold text-primary-900 tracking-[0.2em] uppercase mb-12">Compatible With Leading Platforms</p>
+                    <div className="flex flex-wrap justify-center items-center gap-12 text-slate-400">
+                        <div className="flex items-center space-x-2">
+                            <Cloud className="w-6 h-6" />
+                            <span className="font-bold text-lg">AWS</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                            <Cloud className="w-6 h-6" />
+                            <span className="font-bold text-lg">Google Cloud</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                            <Cloud className="w-6 h-6" />
+                            <span className="font-bold text-lg">Azure</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                            <Database className="w-6 h-6" />
+                            <span className="font-bold text-lg">IBM</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                            <Database className="w-6 h-6" />
+                            <span className="font-bold text-lg">Snowflake</span>
+                        </div>
                     </div>
                 </div>
             </section>

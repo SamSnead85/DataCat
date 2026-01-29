@@ -96,14 +96,14 @@ const About = () => {
                 <SectionHeader
                     centered
                     badge="Ecosystem"
-                    title="Our Strategic Partners"
-                    subtitle="We work with the world's leading cloud and AI providers to ensure seamless integration."
+                    title="Our Technology Integrations"
+                    subtitle="We integrate seamlessly with the world's leading cloud and database platforms."
                 />
-                <div className="flex flex-wrap justify-center items-center gap-16 mt-12 opacity-50 grayscale">
-                    <div className="h-10 w-32 bg-slate-300 rounded" />
-                    <div className="h-10 w-40 bg-slate-300 rounded" />
-                    <div className="h-10 w-28 bg-slate-300 rounded" />
-                    <div className="h-10 w-36 bg-slate-300 rounded" />
+                <div className="flex flex-wrap justify-center items-center gap-12 mt-12 text-slate-400">
+                    <span className="font-bold text-lg">AWS</span>
+                    <span className="font-bold text-lg">Google Cloud</span>
+                    <span className="font-bold text-lg">Microsoft Azure</span>
+                    <span className="font-bold text-lg">PostgreSQL</span>
                 </div>
             </section>
         </div>
